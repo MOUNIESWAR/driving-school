@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DriveMaster Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/animations.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-image {
+            flex: 1;
+            background-image: url('https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: zoomInBugatti 20s infinite linear;
+        }
+
+        @keyframes zoomInBugatti {
+            0% {
+                background-size: 100%;
+                background-position: center;
+            }
+            50% {
+                background-size: 120%;
+                background-position: center;
+            }
+            100% {
+                background-size: 100%;
+                background-position: center;
+            }
+        }
+
+        .auth-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+            animation: glowPulse 4s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+            }
+            100% {
+                background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);
+            }
+        }
+
+        .image-content {
+            position: relative;
+            color: white;
+            text-align: center;
+            max-width: 500px;
+            animation: textPulse 4s infinite alternate;
+        }
+
+        @keyframes textPulse {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 20px rgba(255,255,255,0.5);
+            }
+            100% {
+                transform: scale(1.05);
+                text-shadow: 0 0 30px rgba(255,255,255,0.8);
+            }
+        }
+
+        .image-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .image-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .auth-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo-section h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,102,177,0.1);
+        }
+
+        .auth-button {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .auth-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .auth-links {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .auth-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .auth-image {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-image scroll-fade-in">
+            <div class="image-content">
+                <h2>Welcome Back to DriveMaster Academy</h2>
+                <p>Log in to access your personalized driving courses, track your progress, and continue your journey to becoming a confident driver.</p>
+            </div>
+        </div>
+        <div class="auth-form scroll-fade-in">
+            <div class="logo-section">
+                <i class="fas fa-car" style="font-size: 3rem; color: var(--primary-color);"></i>
+                <h1>DriveMaster Academy</h1>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="auth-button">Log In</button>
+            </form>
+            <div class="auth-links">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <p><a href="#">Forgot Password?</a></p>
+            </div>
+            <div class="auth-links">
+                <a href="index.html">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

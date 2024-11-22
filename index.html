@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveMaster Academy - Professional Driving School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/animations.js" defer></script>
+    <script src="js/particles.js" defer></script>
+    <script src="js/nav.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-car-side"></i>
+                <span>DriveMaster</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#courses">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Courses</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="courses/beginners.html">
+                            <i class="fas fa-car"></i>
+                            <span>Beginner's Course</span>
+                        </a>
+                        <a href="courses/highway.html">
+                            <i class="fas fa-road"></i>
+                            <span>Highway Training</span>
+                        </a>
+                        <a href="courses/signs.html">
+                            <i class="fas fa-traffic-light"></i>
+                            <span>Traffic Signs</span>
+                        </a>
+                        <a href="courses/test-prep.html">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Test Preparation</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#trainers">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Trainers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#pricing">
+                        <i class="fas fa-tags"></i>
+                        <span>Pricing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-auth">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="shine-effect">Master the Art of Driving</h1>
+            <p>Professional training with expert instructors to help you become a confident driver.</p>
+            <div class="cta-buttons">
+                <a href="signup.html" class="cta-button">Get Started</a>
+                <a href="#courses" class="cta-button secondary">View Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <div class="section-header">
+            <h2 class="section-title">Our Courses</h2>
+            <p class="section-subtitle">Choose the perfect driving course for your journey</p>
+        </div>
+        
+        <div class="courses-grid">
+            <!-- Beginner's Course -->
+            <div class="course-card" data-course="beginner">
+                <div class="card-header">
+                    <i class="fas fa-car"></i>
+                    <h3>Beginner's Course</h3>
+                </div>
+                <div class="card-details">
+                    <div class="course-image">
+                        <img src="images/beginner-course.jpg" alt="Beginner's Course">
+                        <div class="course-overlay">
+                            <span class="course-level">Beginner Friendly</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p>Perfect for first-time drivers starting their journey.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Basic vehicle controls</li>
+                            <li><i class="fas fa-check"></i> Safety fundamentals</li>
+                            <li><i class="fas fa-check"></i> Parking techniques</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-price">$299</span>
+                            <a href="courses/beginners.html" class="course-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highway Training -->
+            <div class="course-card" data-course="highway">
+                <div class="card-header">
+                    <i class="fas fa-road"></i>
+                    <h3>Highway Training</h3>
+                </div>
+                <div class="card-details">
+                    <div class="course-image">
+                        <img src="images/highway-course.jpg" alt="Highway Training">
+                        <div class="course-overlay">
+                            <span class="course-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p>Master highway driving with confidence and skill.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Lane management</li>
+                            <li><i class="fas fa-check"></i> Speed control</li>
+                            <li><i class="fas fa-check"></i> Merging techniques</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-price">$399</span>
+                            <a href="courses/highway.html" class="course-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Signs -->
+            <div class="course-card" data-course="signs">
+                <div class="card-header">
+                    <i class="fas fa-traffic-light"></i>
+                    <h3>Traffic Signs</h3>
+                </div>
+                <div class="card-details">
+                    <div class="course-image">
+                        <img src="images/signs-course.jpg" alt="Traffic Signs Course">
+                        <div class="course-overlay">
+                            <span class="course-level">Essential</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p>Learn and understand all traffic signs and signals.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Sign recognition</li>
+                            <li><i class="fas fa-check"></i> Road markings</li>
+                            <li><i class="fas fa-check"></i> Signal rules</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-price">$199</span>
+                            <a href="courses/signs.html" class="course-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Preparation -->
+            <div class="course-card" data-course="test">
+                <div class="card-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Test Preparation</h3>
+                </div>
+                <div class="card-details">
+                    <div class="course-image">
+                        <img src="images/test-course.jpg" alt="Test Preparation">
+                        <div class="course-overlay">
+                            <span class="course-level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p>Comprehensive preparation for your driving test.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Mock tests</li>
+                            <li><i class="fas fa-check"></i> Common mistakes</li>
+                            <li><i class="fas fa-check"></i> Test strategies</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-price">$499</span>
+                            <a href="courses/test-prep.html" class="course-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="trainers-section">
+        <h2 class="section-title">Our Expert Trainers</h2>
+        <div class="trainers-container">
+            <div class="trainer-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image-container">
+                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=800&q=80" alt="John Smith" class="trainer-image">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>John Smith</h3>
+                        <p class="trainer-title">Senior Instructor</p>
+                        <p>15+ years of experience in professional driving instruction.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image-container">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson" class="trainer-image">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Sarah Johnson</h3>
+                        <p class="trainer-title">Highway Specialist</p>
+                        <p>Expert in highway and defensive driving techniques.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image-container">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Mike Wilson" class="trainer-image">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mike Wilson</h3>
+                        <p class="trainer-title">Test Preparation Expert</p>
+                        <p>Specialized in preparing students for driving tests.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <h2 class="section-title">Pricing Plans</h2>
+        <div class="pricing-container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-car"></i>
+                        <h3>Basic Package</h3>
+                    </div>
+                    <div class="price">$299</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 Driving Hours</li>
+                        <li><i class="fas fa-check"></i> Basic Vehicle Control</li>
+                        <li><i class="fas fa-check"></i> Parking Practice</li>
+                        <li><i class="fas fa-check"></i> Traffic Rules Guide</li>
+                    </ul>
+                    <a href="#" class="pricing-button">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <span class="featured-tag">Popular</span>
+                    <div class="pricing-header">
+                        <i class="fas fa-car-side"></i>
+                        <h3>Standard Package</h3>
+                    </div>
+                    <div class="price">$499</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 20 Driving Hours</li>
+                        <li><i class="fas fa-check"></i> Advanced Techniques</li>
+                        <li><i class="fas fa-check"></i> Highway Training</li>
+                        <li><i class="fas fa-check"></i> Test Preparation</li>
+                    </ul>
+                    <a href="#" class="pricing-button">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-car-alt"></i>
+                        <h3>Premium Package</h3>
+                    </div>
+                    <div class="price">$699</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 30 Driving Hours</li>
+                        <li><i class="fas fa-check"></i> Personalized Plan</li>
+                        <li><i class="fas fa-check"></i> Night Driving</li>
+                        <li><i class="fas fa-check"></i> All-Weather Training</li>
+                    </ul>
+                    <a href="#" class="pricing-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Driving Street, City, Country</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                <p><i class="fas fa-envelope"></i> info@drivemasteracademy.com</p>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                    <label for="name">Your Name</label>
+                    <div class="error-message">Please enter a valid name</div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <label for="email">Email Address</label>
+                    <div class="error-message">Please enter a valid email address</div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                    <label for="phone">Phone Number</label>
+                    <div class="error-message">Please enter a valid 10-digit phone number</div>
+                </div>
+                <div class="form-group">
+                    <select id="course" name="course" required>
+                        <option value="">Select a Course</option>
+                        <option value="beginners">Beginners Course</option>
+                        <option value="highway">Highway Training</option>
+                        <option value="test-prep">Test Preparation</option>
+                        <option value="traffic-signs">Traffic Sign Classification</option>
+                    </select>
+                    <label for="course">Interested Course</label>
+                    <div class="error-message">Please select a course</div>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required minlength="10" maxlength="500"></textarea>
+                    <label for="message">Your Message</label>
+                    <div class="error-message">Please enter a message (minimum 10 characters)</div>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>DriveMaster Academy is committed to providing top-quality driving education with experienced instructors and comprehensive training programs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DriveMaster Academy. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
