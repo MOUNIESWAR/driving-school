@@ -54,6 +54,5 @@ driving-school/
 - Edge (latest)
 
 ## License
-https://images.pexels.com/photos/1497307/pexels-photo-1497307.jpeg?auto=compress&cs=tinysrgb&w=1920
 
 This project is licensed under the MIT License.
